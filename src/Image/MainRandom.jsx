@@ -1,38 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from 'react';
 
-const UnsplashRandomImage = () => {
-    const [imageUrl, setImageUrl] = useState('');
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-
-    useEffect(() => {
-        const fetchImage = async () => {
-            try {
-                const response = await axios.get('https://api.unsplash.com/photos/random', {
-                    headers: {
-                        Authorization: `Client-ID ${import.meta.env.VITE_UNSPLASH_ACCESS_KEY}`
-                    }
-                });
-                setImageUrl(response.data.urls.regular);
-                setLoading(false);
-            } catch (err) {
-                setError(err);
-                setLoading(false);
-            }
-        };
-
-        fetchImage();
-    }, []);
-
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error loading image: {error.message}</p>;
+const SpecificUnsplashImage = () => {
+    const imageUrl = 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e'; // Belirli resmin doğrudan URL'si
 
     return (
         <div>
-            <img src={imageUrl} alt="Random Unsplash" style={{ width: '100%', height: 'auto' }} />
+            <img className='h-screen object-fill' src={imageUrl} alt="Specific Unsplash" style={{ width: '100%',  }} />
         </div>
     );
 };
 
-export default UnsplashRandomImage;
+export default SpecificUnsplashImage;

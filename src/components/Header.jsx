@@ -5,10 +5,11 @@ export default class Header extends Component {
     return (
 
       <>
-        <div className='HeaderComplate py-8'>
-          <div className="HeaderBox flex justify-around">
+      <div>
+        <div className='HeaderComplate py-8 absolute inset-x-1/4'>
+          <div className="HeaderBox flex justify-between ">
             <div className='HeaderBrand'>
-              <h1>MARUL</h1>
+              <h1 className='font-bold'>MARUL</h1>
             </div>
             <div className="HeaderTag">
               <ul className='flex gap-16 font-bold text-black]'>
@@ -19,6 +20,7 @@ export default class Header extends Component {
               </ul>
             </div>
           </div>
+        </div>
         </div>
       </>
     )
