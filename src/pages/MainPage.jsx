@@ -1,5 +1,5 @@
 import React from 'react'
-import UnsplashRandomImage from '../Images/MainRandom'
+import UnsplashRandomImage from '/Images/MainRandom'
 import Header from '../components/Header'
 import Brands from '../components/Brands'
 
@@ -9,13 +9,14 @@ export default function Main() {
       <div className='MainContent '> 
         <Header/>
         
-        <div className='ImageOnText absolute left-1/4 top-1/4'>
+        <div className='ImageOnText absolute  top-1/4 w-full'>
           <div className='ImageTextBox'>
-            <div className='ImageRowBox'>
-              <div className='Text1 flex justify-center text-[80px] font-bold pb-28 animate-slideInFromTop'>MARUL</div>
-              <div className='Text2 flex flex-col items-center pt-28'>
+            <div className='ImageRowBox flex flex-col items-center'>
+              <div className='Text1  text-[80px] font-bold pb-28 animate-slideInFromTop'>MARUL</div>
+              <div className='Text2  pt-28 flex flex-col items-center'>
                 <div>
-                  <h3 className=' text-xl font-normal animate-slideInFromTop'>Sam Kolder is a world-renowned filmmaker that inspired a generation of content creators from all around the world</h3>
+                  <h3 className=' text-xl font-normal animate-slideInFromTop w-[39rem]'>Sam Kolder is a world-renowned filmmaker that inspired a generation </h3>
+                  <h3 className=' text-xl font-normal animate-slideInFromTop w-[39rem]'>of content creators from all around the world</h3>
                 </div>
                 <div className='flex gap-4 mt-4'>
                   <button className='bg-[#ea6e43] rounded-md text-white border py-4 px-6 font-medium animate-slideInFromTop'>Get in touch</button>
@@ -23,14 +24,14 @@ export default function Main() {
                 </div>
               </div>
             </div>
-          </div>
-          
+          </div>  
+          <Brands/>       
         </div>
-        
-        <UnsplashRandomImage/>
        
+        <UnsplashRandomImage/>
+      
       </div>
-     
+    
     </>
   )
 }
