@@ -6,8 +6,8 @@ export default class Header extends Component {
 
       <>
       <div>
-        <div className='HeaderComplate py-8 absolute '>
-          <div className="HeaderBox flex justify-between ">
+        <div className='HeaderComplate pt-8 pb-32 absolute left-[10%]'>
+          <div className="HeaderBox flex gap-[45rem]">
             <div className='HeaderBrand'>
               <h1 className='font-bold'>MARUL</h1>
             </div>

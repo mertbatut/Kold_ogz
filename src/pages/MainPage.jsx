@@ -2,6 +2,7 @@ import React from 'react'
 import UnsplashRandomImage from '/Images/MainRandom'
 import Header from '../components/Header'
 import Brands from '../components/Brands'
+import ContactForm from '../components/ContactForm'
 
 export default function Main() {
   return (
@@ -25,13 +26,15 @@ export default function Main() {
               </div>
             </div>
           </div>  
-          <Brands/>       
+             
         </div>
        
         <UnsplashRandomImage/>
-      
+        
       </div>
-    
+      
+      <ContactForm/>
+     
     </>
   )
 }
