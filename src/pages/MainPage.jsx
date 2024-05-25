@@ -26,7 +26,7 @@ export default function Main() {
               </div>
             </div>
           </div>  
-             
+             ggggggg
         </div>
        
         <UnsplashRandomImage/>
