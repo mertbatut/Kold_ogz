@@ -32,9 +32,9 @@ export default function Main() {
         <UnsplashRandomImage/>
         
       </div>
-      
+      <div className='pt-8'>
       <ContactForm/>
-     
+      </div>
     </>
   )
 }
