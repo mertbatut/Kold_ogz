@@ -1,9 +1,8 @@
-// src/components/Work.jsx
 import React from 'react';
 
 const Work = () => {
   return (
-    <section id="work" className="py-16 text-white bg-black">
+    <section id="work" className="py-16 text-white bg-black px-4">
       <h2 className="text-4xl text-center mb-8">Work</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
         <div className="bg-gray-800 p-4 rounded-lg">

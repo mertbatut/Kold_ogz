@@ -1,9 +1,8 @@
-// src/components/Products.jsx
 import React from 'react';
 
 const Products = () => {
   return (
-    <section id="products" className="py-16 bg-gray-900 text-white">
+    <section id="products" className="py-16 bg-gray-900 text-white px-4">
       <h2 className="text-4xl text-center mb-8">Products</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
         <div className="bg-gray-800 p-4 rounded-lg">
