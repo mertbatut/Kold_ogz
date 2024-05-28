@@ -1,17 +1,21 @@
-import React, { useState } from 'react';
-import './App.css';
+// src/App.jsx
+import React from 'react';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import Work from './components/Work';
+import Products from './components/Products';
+import Contact from './components/Contact';
 
-import Main from './pages/MainPage';
-
-function App() {
-  const [count, setCount] = useState(0);
-
+const App = () => {
   return (
-    <>
-     <Main/>
-    
-    </>
+    <div className="bg-black text-white">
+      <Header />
+      <Hero />
+      <Work />
+      <Products />
+      <Contact />
+    </div>
   );
-}
+};
 
 export default App;

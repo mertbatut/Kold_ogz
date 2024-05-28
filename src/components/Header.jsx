@@ -1,28 +1,18 @@
-import React, { Component } from 'react'
+// src/components/Header.jsx
+import React from 'react';
 
-export default class Header extends Component {
-  render() {
-    return (
+const Header = () => {
+  return (
+    <header className="bg-black text-white p-4 flex justify-between items-center fixed w-full top-0 z-10">
+      <div className="text-2xl font-bold">køld</div>
+      <nav className="space-x-6">
+        <a href="#work" className="hover:underline">Work</a>
+        <a href="#masterclass" className="hover:underline">Master Class</a>
+        <a href="#presets" className="hover:underline">Presets</a>
+        <a href="#contact" className="hover:underline">Contact</a>
+      </nav>
+    </header>
+  );
+};
 
-      <>
-      <div>
-        <div className='HeaderComplate pt-8 pb-32 absolute left-[10%]'>
-          <div className="HeaderBox flex gap-[45rem]">
-            <div className='HeaderBrand'>
-              <h1 className='font-bold'>MARUL</h1>
-            </div>
-            <div className="HeaderTag">
-              <ul className='flex gap-16 font-bold text-black]'>
-                <a href=""> <li>WORK</li></a>
-                <a href=""> <li>MASTER CLASS</li></a>
-                <a href=""> <li>PRESETS</li></a>
-                <a href=""> <li>CONTACT</li></a>
-              </ul>
-            </div>
-          </div>
-        </div>
-        </div>
-      </>
-    )
-  }
-}
+export default Header;
