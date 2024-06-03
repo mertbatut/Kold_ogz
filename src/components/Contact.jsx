@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 function Contact() {
   return (
-    <section className="py-20 bg-gray-100">
+    <section className="py-20 bg-light-bg text-white">
       <div className="container mx-auto text-center px-4">
         <h2 className="text-3xl font-bold mb-8">Get in touch</h2>
         <motion.form
@@ -20,9 +20,9 @@ function Contact() {
           <textarea name="message" placeholder="Message" className="w-full p-2 border border-gray-300 rounded"></textarea>
           <label className="flex items-center space-x-2">
             <input type="checkbox" name="consent" className="form-checkbox" />
-            <span>I agree to the <a href="/privacy" className="text-blue-500">privacy policy</a>.</span>
+            <span>I agree to the <a href="/privacy" className="text-primary">privacy policy</a>.</span>
           </label>
-          <button type="submit" className="w-full px-4 py-2 bg-gray-800 text-white rounded">Submit</button>
+          <button type="submit" className="w-full px-4 py-2 bg-primary text-white rounded">Submit</button>
         </motion.form>
       </div>
     </section>

@@ -7,13 +7,13 @@ import Contact from '../components/Contact';
 
 function Home() {
   return (
-    <>
+    <div>
       <Hero />
       <Work />
       <Products />
       <Stats />
       <Contact />
-    </>
+    </div>
   );
 }
 

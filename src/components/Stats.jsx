@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 function Stats() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-dark-bg text-white">
       <div className="container mx-auto text-center px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <motion.div
