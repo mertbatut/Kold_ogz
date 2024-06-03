@@ -22,10 +22,10 @@ function Header() {
   }, []);
 
   return (
-    <header className={`fixed w-full top-0 left-0 z-10 transition-all ${scrolled ? 'bg-dark-bg text-white shadow-lg' : 'bg-transparent text-white'}`}>
-      <nav className="container mx-auto p-4 flex justify-between items-center">
+    <header className={`fixed w-full top-0 left-0 z-10  ${scrolled ? 'bg-dark-bg text-white shadow-lg' : 'bg-transparent text-white'}`}>
+      <nav className="container mx-auto p-4 flex justify-between items-center  ">
         <Link to="/" className="text-2xl font-bold">Køld</Link>
-        <ul className="flex space-x-4">
+        <ul className="flex space-x-4 gap-40">
           <li><Link to="/work" className="hover:underline">Work</Link></li>
           <li><a href="https://www.koldercreative.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">Master Class</a></li>
           <li><a href="https://samkolderpresets.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">Presets</a></li>
