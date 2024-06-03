@@ -27,8 +27,8 @@ function Header() {
         <Link to="/" className="text-2xl font-bold">Køld</Link>
         <ul className="flex space-x-4 gap-40">
           <li><Link to="/work" className="hover:underline">Work</Link></li>
-          <li><a href="https://www.koldercreative.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">Master Class</a></li>
-          <li><a href="https://samkolderpresets.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">Presets</a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer" className="hover:underline">Master Class</a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer" className="hover:underline">Presets</a></li>
           <li><Link to="/contact" className="hover:underline">Contact</Link></li>
         </ul>
       </nav>
