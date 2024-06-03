@@ -1,18 +1,37 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
-const Header = () => {
+function Header() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 200) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="bg-black-500/50 bg-opacity-50 md:bg-opacity-100 text-white p-4 flex flex-col md:flex-row justify-between items-center fixed w-full top-0 z-10 transition-opacity duration-300">
-      <div className="text-2xl font-bold mb-2 md:mb-0 pl-[20rem]">køld</div>
-      <nav className="space-x-0 md:space-x-6 flex flex-col md:flex-row items-center gap-24 pr-64">
-        <a href="#work" className="hover:underline mb-2 md:mb-0">Work</a>
-        <a href="#masterclass" className="hover:underline mb-2 md:mb-0">Master Class</a>
-        <a href="#presets" className="hover:underline mb-2 md:mb-0">Presets</a>
-        <a href="#contact" className="hover:underline">Contact</a>
-        
+    <header className={`fixed w-full top-0 left-0 z-10 transition-all ${scrolled ? 'bg-gray-800 text-white' : 'bg-transparent text-white'}`}>
+      <nav className="container mx-auto p-4 flex justify-between items-center">
+        <Link to="/" className="text-2xl font-bold">Sam Kolder</Link>
+        <ul className="flex space-x-4">
+          <li><Link to="/work" className="hover:underline">Work</Link></li>
+          <li><Link to="/contact" className="hover:underline">Contact</Link></li>
+        </ul>
       </nav>
     </header>
   );
-};
+}
 
 export default Header;

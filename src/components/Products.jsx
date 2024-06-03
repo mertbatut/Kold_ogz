@@ -1,24 +1,44 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
-const Products = () => {
+function Products() {
   return (
-    <section id="products" className="py-16 bg-gray-900 text-white px-4">
-      <h2 className="text-4xl text-center mb-8">Products</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-        <div className="bg-gray-800 p-4 rounded-lg">
-          <img src="https://besthqwallpapers.com/Uploads/16-5-2021/168551/thumb-germany-aerial-view-lakes-autumn-beautiful-nature.jpg" alt="Product 1" className="rounded-lg mb-4" />
-          <h3 className="text-2xl">Master Class</h3>
-          <p>Sam's official editing academy KC...</p>
+    <section className="py-20 bg-gray-100">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold mb-8">Products</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <motion.div 
+            className="product-item group relative"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <img src="https://via.placeholder.com/1080" alt="Product 1" className="w-full" />
+            <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div className="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
+              <h3 className="text-2xl font-semibold text-white mt-4">Master Class</h3>
+              <p className="text-white">Sam’s official editing academy. KC is an all-in-one course & community with over 140+ video lessons.</p>
+            </div>
+          </motion.div>
+          <motion.div 
+            className="product-item group relative"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <img src="https://via.placeholder.com/1080" alt="Product 2" className="w-full" />
+            <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div className="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
+              <h3 className="text-2xl font-semibold text-white mt-4">Presets and LUTs</h3>
+              <p className="text-white">14 unique presets in Sam's signature colour-grading style inspired by his travels around the globe.</p>
+            </div>
+          </motion.div>
         </div>
-        <div className="bg-gray-800 p-4 rounded-lg">
-          <img src="https://besthqwallpapers.com/Uploads/16-5-2021/168551/thumb-germany-aerial-view-lakes-autumn-beautiful-nature.jpg" alt="Product 2" className="rounded-lg mb-4" />
-          <h3 className="text-2xl">Presets and LUTs</h3>
-          <p>14 unique presets in Sam's signature...</p>
-        </div>
-        {/* Add more product items as needed */}
       </div>
     </section>
   );
-};
+}
 
 export default Products;

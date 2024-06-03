@@ -1,19 +1,12 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
-function Contact() {
+function ContactPage() {
   return (
     <section className="py-20 bg-gray-100">
-      <div className="container mx-auto text-center px-4">
+      <div className="container mx-auto text-center">
         <h2 className="text-3xl font-bold mb-8">Get in touch</h2>
-        <motion.form
-          className="max-w-lg mx-auto space-y-4"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-        >
-          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+        <form className="max-w-lg mx-auto space-y-4">
+          <div className="flex space-x-4">
             <input type="text" name="name" placeholder="Name" className="w-full p-2 border border-gray-300 rounded" />
             <input type="email" name="email" placeholder="Email" className="w-full p-2 border border-gray-300 rounded" />
           </div>
@@ -23,10 +16,10 @@ function Contact() {
             <span>I agree to the <a href="/privacy" className="text-blue-500">privacy policy</a>.</span>
           </label>
           <button type="submit" className="w-full px-4 py-2 bg-gray-800 text-white rounded">Submit</button>
-        </motion.form>
+        </form>
       </div>
     </section>
   );
 }
 
-export default Contact;
+export default ContactPage;

@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'hero-pattern': "url('https://via.placeholder.com/2160x1080')",
+      },
       keyframes: {
         slideInFromTop: {
           '0%': {

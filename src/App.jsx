@@ -1,20 +1,27 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import WorkPage from './pages/Work';
+import ContactPage from './pages/Contact';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import Work from './components/Work';
-import Products from './components/Products';
-import Contact from './components/Contact';
+import Footer from './components/Footer';
 
-const App = () => {
+function App() {
   return (
-    <div className="bg-black text-white">
-      <Header />
-      <Hero />
-      <Work />
-      <Products />
-      <Contact />
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <main className="pt-16">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/work" element={<WorkPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
-};
+}
 
 export default App;
