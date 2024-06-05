@@ -34,7 +34,7 @@ function Products() {
           return response.data.urls.regular;
         } catch (error) {
           console.error('Error fetching image from Unsplash', error);
-          return "https://via.placeholder.com/1080"; // Default placeholder in case of error
+          return "https://via.placeholder.com/1080"; 
         }
       }));
       setImages(fetchedImages);
@@ -51,7 +51,7 @@ function Products() {
           {productItems.map((item, index) => (
             <motion.div 
               key={index} 
-              className="product-item group relative overflow-hidden rounded-lg w-[522px] h-[522px]"
+              className="product-item group relative overflow-hidden rounded-lg w-full h-[522px] md:w-[522px]"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}

@@ -23,10 +23,10 @@ function Header() {
   }, []);
 
   return (
-    <header className={`fixed w-full top-0 left-0 z-10 transition-all duration-300 ${scrolled ? 'bg-dark-bg text-white shadow-lg' : 'bg-transparent text-white'}`}>
+    <header className={`fixed w-full top-0 left-0 z-10 transition-all duration-300 ${scrolled ? 'bg-dark-bg text-white shadow-lg' : 'bg-none text-white'}`}>
       <nav className="container mx-auto p-4 flex justify-between items-center">
         <Link to="/" className="text-2xl font-bold">Køld</Link>
-        <div className="hidden md:flex space-x-4 flex gap-28">
+        <div className="hidden md:flex space-x-4  gap-28">
           <Link to="/work" className="hover:underline">Work</Link>
           <a href="#" target="_blank" rel="noopener noreferrer" className="hover:underline">Master Class</a>
           <a href="#" target="_blank" rel="noopener noreferrer" className="hover:underline">Presets</a>
