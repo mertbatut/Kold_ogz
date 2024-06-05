@@ -41,7 +41,9 @@ function Stats() {
           transition={{ duration: 0.5, delay: 0.3 }}
           viewport={{ once: true }}
         >
-          Sam Kolder is a renowned self-taught filmmaker, best-known for his unique style of video editing that influenced a new era of content creation.
+         Sam Kolder is a renowned self-taught filmmaker, best-known for his unique style of video editing that influenced a new era of content creation. Since beginning his career in 2014, Sam’s talent for video editing has amassed him a dedicated following and also led him to touring with the chainsmokers, becoming head of video at beautiful destinations, and working with global brands like YouTube, Canon, DJI, Gymshark, and many more.  
+
+Sam is known for pushing his creative limits. Regardless if it's a travel vlog, gear review or video ad, you can always expect him to create truly one of a kind content for your brand. Working with Sam means getting access to one of the most engaged audiences of travelers, creators and adventurers on the internet today.
         </motion.p>
       </div>
     </section>
