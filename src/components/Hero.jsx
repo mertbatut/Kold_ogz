@@ -1,35 +1,68 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import axios from 'axios';
 
 function Hero() {
+  const [image, setImage] = useState('');
+
+  useEffect(() => {
+    const fetchImage = async () => {
+      try {
+        const response = await axios.get('https://api.unsplash.com/photos/iyA6oTK6vig', {
+          headers: {
+            Authorization: `Client-ID lebXp2bZjS1BO4AZFCCUBf9vbIPNnjZUetCI_RAdvdQ`
+          }
+        });
+        setImage(response.data.urls.regular);
+      } catch (error) {
+        console.error('Error fetching image from Unsplash', error);
+      }
+    };
+
+    fetchImage();
+  }, []);
+
   return (
-    <section className="relative text-center py-20 bg-hero-pattern bg-cover bg-center text-white">
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-      <motion.img 
-        src="https://via.placeholder.com/2160x1080" 
-        alt="Hero" 
-        className="relative mx-auto w-full max-w-screen-lg animate-slideInFromTop" 
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      />
-      <motion.h1 
-        className="relative text-4xl font-bold mt-8 px-4"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.5 }}
-      >
-        Sam Kolder is a world-renowned filmmaker
-      </motion.h1>
-      <motion.div 
-        className="relative mt-4 space-x-4"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1 }}
-      >
-        <a href="/contact" className="px-8 py-2 bg-gray-800 text-white rounded hover:bg-gray-600 transition">Get in touch</a>
-        <a href="https://www.koldercreative.com/" className="px-8 py-2 bg-gray-600 text-white rounded hover:bg-gray-800 transition">Master Class</a>
-      </motion.div>
+    <section className="relative text-center h-screen flex items-center justify-center bg-black text-white">
+      {image && (
+        <motion.img 
+          src={image} 
+          alt="Hero" 
+          className="absolute inset-0 w-full h-full object-cover opacity-50"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        />
+      )}
+      <div className="relative z-10 flex flex-col items-center gap-80">
+        <div>
+        <motion.h1 
+          className="text-6xl font-bold mt-8 px-4"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
+          køld
+        </motion.h1></div>
+        <div>
+        <motion.p
+          className="mt-4 text-xl"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1 }}
+        >
+          Sam Kolder is a world-renowned filmmaker that inspired a generation of content creators from all around the world
+        </motion.p>
+        <motion.div 
+          className="mt-8 space-x-4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1.5 }}
+        >
+        <button className='h-[60px] border rounded-lg px-8 py-2 bg-orange-500 text-white  hover:bg-[#1F8998] transition'><a href="/contact" className="">Get in touch</a></button>
+         <button className="h-[60px] px-8 py-2 border bg-inherit border-white text-white rounded-lg hover:bg-white hover:text-black transition"> <a href="#" >Master Class</a></button>
+        </motion.div></div>
+      </div>
     </section>
   );
 }

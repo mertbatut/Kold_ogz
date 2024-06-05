@@ -22,7 +22,7 @@ function Header() {
   }, []);
 
   return (
-    <header className={`fixed w-full top-0 left-0 z-10  ${scrolled ? 'bg-dark-bg text-white shadow-lg' : 'bg-transparent text-white'}`}>
+    <header className={`fixed w-full top-0 left-0 z-10 bg-inherit  ${scrolled ? 'bg-dark-bg text-white shadow-lg' : 'bg-transparent text-white'}`}>
       <nav className="container mx-auto p-4 flex justify-between items-center  ">
         <Link to="/" className="text-2xl font-bold">Køld</Link>
         <ul className="flex space-x-4 gap-40">
