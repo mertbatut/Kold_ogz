@@ -51,7 +51,7 @@ function Work() {
           {workItems.map((item, index) => (
             <motion.div 
               key={index} 
-              className="work-item group relative overflow-hidden rounded-lg w-[522px]  h-[522px] md:w-full"
+              className="work-item group relative overflow-hidden rounded-lg w-full  h-[522px] md:w-[522px]"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
