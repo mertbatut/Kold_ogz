@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,22 +26,22 @@ function Header() {
     <header className={`fixed w-full top-0 left-0 z-10 transition-all duration-300 ${scrolled ? 'bg-dark-bg text-white shadow-lg' : 'bg-transparent text-white'}`}>
       <nav className="container mx-auto p-4 flex justify-between items-center">
         <Link to="/" className="text-2xl font-bold">Køld</Link>
-        <ul className="hidden md:flex space-x-4">
-          <li><Link to="/work" className="hover:underline">Work</Link></li>
-          <li><a href="#" target="_blank" rel="noopener noreferrer" className="hover:underline">Master Class</a></li>
-          <li><a href="#" target="_blank" rel="noopener noreferrer" className="hover:underline">Presets</a></li>
-          <li><Link to="/contact" className="hover:underline">Contact</Link></li>
-        </ul>
+        <div className="hidden md:flex space-x-4 flex gap-28">
+          <Link to="/work" className="hover:underline">Work</Link>
+          <a href="#" target="_blank" rel="noopener noreferrer" className="hover:underline">Master Class</a>
+          <a href="#" target="_blank" rel="noopener noreferrer" className="hover:underline">Presets</a>
+          <Link to="/contact" className="hover:underline">Contact</Link>
+        </div>
         <div className="md:hidden flex items-center">
-          <button className="mobile-menu-button">
+          <button onClick={() => setMenuOpen(!menuOpen)} className="mobile-menu-button">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
             </svg>
           </button>
         </div>
       </nav>
-      <div className="mobile-menu hidden md:hidden">
-        <ul className="flex flex-col items-center space-y-4">
+      <div className={`md:hidden ${menuOpen ? 'block' : 'hidden'} bg-dark-bg text-white`}>
+        <ul className="flex flex-col md:flex-row items-center md:space-x-4 space-y-4 md:space-y-0 p-4">
           <li><Link to="/work" className="hover:underline">Work</Link></li>
           <li><a href="#" target="_blank" rel="noopener noreferrer" className="hover:underline">Master Class</a></li>
           <li><a href="#" target="_blank" rel="noopener noreferrer" className="hover:underline">Presets</a></li>
