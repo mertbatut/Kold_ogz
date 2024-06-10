@@ -5,11 +5,13 @@ import WorkPage from './pages/WorkPage';
 import ContactPage from './pages/ContactPage';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ProgressBar from './components/ProgressBar';
 
 function App() {
   return (
     <Router>
       <div className="App bg-dark-bg">
+        <ProgressBar />
         <Header />
         <main className="pt-16">
           <Routes>

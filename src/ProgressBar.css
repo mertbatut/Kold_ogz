@@ -1,0 +1,34 @@
+/* ProgressBar.css */
+.progress-bar {
+    background-color: #FFFFFF;
+  }
+  
+  .progress-bar-inner {
+    width: var(--progress, 0%);
+    background-color: var(--progress-bg, #FFFFFF); /* Tailwind class bg-dark-bg equivalent */
+    transition: width 0.1s linear, background-color 0.1s linear;
+  }
+  
+  .progress-bar-inner::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #0A0A0A; /* Tailwind class bg-dark-bg equivalent */
+    transform: scaleX(var(--progress, 0));
+    transform-origin: left;
+  }
+  
+  /* Tailwind utility classes for visibility */
+  .visible {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  .invisible {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+  
