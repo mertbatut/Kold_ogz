@@ -8,7 +8,7 @@ function Hero() {
   useEffect(() => {
     const fetchImage = async () => {
       try {
-        const response = await axios.get('https://api.unsplash.com/photos/iyA6oTK6vig', {
+        const response = await axios.get('https://api.unsplash.com/photos/random', {
           headers: {
             Authorization: `Client-ID lebXp2bZjS1BO4AZFCCUBf9vbIPNnjZUetCI_RAdvdQ`
           }

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import '../ProgressBar.css'; // Ensure you have this file for custom styles
+import '../ProgressBar.css'; 
 
 gsap.registerPlugin(ScrollTrigger);
 

@@ -5,7 +5,7 @@
   
   .progress-bar-inner {
     width: var(--progress, 0%);
-    background-color: var(--progress-bg, #FFFFFF); /* Tailwind class bg-dark-bg equivalent */
+    background-color: var(--progress-bg, #FFFFFF); 
     transition: width 0.1s linear, background-color 0.1s linear;
   }
   
@@ -14,12 +14,11 @@
     display: block;
     width: 100%;
     height: 100%;
-    background-color: #0A0A0A; /* Tailwind class bg-dark-bg equivalent */
+    background-color: #0A0A0A; 
     transform: scaleX(var(--progress, 0));
     transform-origin: left;
   }
   
-  /* Tailwind utility classes for visibility */
   .visible {
     visibility: visible;
     opacity: 1;
@@ -32,10 +31,10 @@
     transition: opacity 0.2s ease-in-out;
   }
   
-  /* Mobile-specific adjustments */
-  @media (max-width: 640px) { /* Tailwind's sm breakpoint */
+
+  @media (max-width: 640px) { 
     .progress-bar {
-      height: 2px; /* Adjust height for mobile screens */
+      height: 2px; 
     }
   }
   
