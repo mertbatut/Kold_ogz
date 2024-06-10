@@ -31,7 +31,7 @@ const ProgressBar = () => {
   }, []);
 
   return (
-    <div className={`progress-bar fixed top-0 left-0 w-full h-4 z-50 ${isVisible ? 'visible' : 'invisible'}`}>
+    <div className={`progress-bar fixed top-0 left-0 w-full h-1 sm:h-2 z-50 ${isVisible ? 'visible' : 'invisible'}`}>
       <div ref={progressRef} className="progress-bar-inner h-full"></div>
     </div>
   );

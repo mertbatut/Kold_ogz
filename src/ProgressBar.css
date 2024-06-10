@@ -32,3 +32,10 @@
     transition: opacity 0.2s ease-in-out;
   }
   
+  /* Mobile-specific adjustments */
+  @media (max-width: 640px) { /* Tailwind's sm breakpoint */
+    .progress-bar {
+      height: 2px; /* Adjust height for mobile screens */
+    }
+  }
+  
