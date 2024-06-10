@@ -7,9 +7,10 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  build: {
-    rollupOptions: {
-      external: ['gsap'],
+  resolve: {
+    alias: {
+      'gsap': 'gsap',
+      'gsap/ScrollTrigger': 'gsap/ScrollTrigger',
     },
   },
 });
