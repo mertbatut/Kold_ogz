@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import axios from 'axios';
-
 function Hero({ scrollToContact, scrollToProducts }) {
   const [image, setImage] = useState('');
 
@@ -37,12 +36,12 @@ function Hero({ scrollToContact, scrollToProducts }) {
       <div className="relative z-10 flex flex-col items-center gap-80">
         <div>
           <motion.h1 
-            className="text-6xl font-bold mt-8 px-4"
+            className="Ogztrn text-6xl font-bold mt-8 px-4"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            køld
+            Oguzcan Turan
           </motion.h1>
         </div>
         <div>

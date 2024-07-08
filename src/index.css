@@ -19,3 +19,33 @@ button:focus-visible {
     background-color: inherit;
   }
 }
+@font-face {
+  font-family: 'Gilroy-Bold';
+  src: url('./assets/fonts/Gilroy-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Gilroy-Medium';
+  src: url('./assets/fonts/Gilroy-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Gilroy-Light';
+  src: url('./assets/fonts/Gilroy-ExtraBold.ttf') format('truetype');
+}
+.Logo{
+  fill: #efefef;
+  font-family:'Gilroy-Bold', sans-serif ;
+  letter-spacing: 0em;
+  color: #efefef;
+  line-height: 2rem;
+  font-size: 2.5rem;
+}
+.Ogztrn{
+  fill: #efefef;
+  font-family:'Gilroy-Bold', sans-serif ;
+  letter-spacing: 0em;
+  color: #efefef;
+  line-height: 2rem;
+  font-size: 2.5rem;
+}

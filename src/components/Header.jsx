@@ -30,7 +30,7 @@ function Header({ scrollToWork, scrollToProducts, scrollToStats, scrollToContact
   return (
     <header className={`fixed w-full top-0 left-0 z-10 transition-all duration-300 ${scrolled ? 'bg-dark-bg text-white shadow-lg' : 'bg-none text-white'}`}>
       <nav className="container mx-auto p-4 flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold" onClick={() => setMenuOpen(false)}>KØLD</Link>
+        <Link to="/" className="Logo text-2xl font-bold" onClick={() => setMenuOpen(false)}>oct.</Link>
         <div className="hidden md:flex space-x-4 gap-28">
           <a onClick={() => handleMenuClick(scrollToWork)} className="hover:underline cursor-pointer">Work</a>
           <a onClick={() => handleMenuClick(scrollToProducts)} className="hover:underline cursor-pointer">Master Class</a>
