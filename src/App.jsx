@@ -55,11 +55,11 @@ function App() {
         <Header scrollToWork={scrollToWork} scrollToProducts={scrollToProducts} scrollToStats={scrollToStats} scrollToContact={scrollToContact} />
         <main className="pt-16">
           <Routes>
-            <Route path="/" element={<Home workRef={workRef} productsRef={productsRef} statsRef={statsRef} contactRef={contactRef} />} />
+            <Route path="/" element={<Home workRef={workRef} productsRef={productsRef} statsRef={statsRef} contactRef={contactRef} scrollToContact={scrollToContact} scrollToProducts={scrollToProducts} />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </main>
-        <Footer />
+        <Footer scrollToWork={scrollToWork} scrollToProducts={scrollToProducts} scrollToStats={scrollToStats} scrollToContact={scrollToContact} />
       </div>
     </Router>
   );

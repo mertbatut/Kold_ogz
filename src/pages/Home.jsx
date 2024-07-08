@@ -5,10 +5,10 @@ import Products from '../components/Products';
 import Stats from '../components/Stats';
 import Contact from '../components/Contact';
 
-function Home({ workRef, productsRef, statsRef, contactRef }) {
+function Home({ workRef, productsRef, statsRef, contactRef, scrollToContact, scrollToProducts }) {
   return (
     <div>
-      <Hero />
+      <Hero scrollToContact={scrollToContact} scrollToProducts={scrollToProducts} />
       <div ref={workRef}>
         <Work />
       </div>
