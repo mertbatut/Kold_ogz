@@ -51,7 +51,7 @@ function Hero({ scrollToContact, scrollToProducts }) {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}
           >
-            Sam Kolder is a world-renowned filmmaker that inspired a generation of content creators from all around the world
+           Marul'un maceralarını incelemek için takipte kalın
           </motion.p>
           <motion.div 
             className="mt-8 space-x-4"

@@ -7,7 +7,7 @@ function Footer({ scrollToWork, scrollToProducts, scrollToStats, scrollToContact
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <div>
-            <Link to="/" className="text-2xl font-bold">Køld</Link>
+            <Link to="/" className=" Logo text-2xl font-bold">oct.</Link>
           </div>
           <div className="flex space-x-4">
             <a href="https://www.youtube.com/user/koldstudios" target="_blank" rel="noopener noreferrer" className="hover:underline">YouTube</a>
@@ -15,15 +15,14 @@ function Footer({ scrollToWork, scrollToProducts, scrollToStats, scrollToContact
           </div>
         </div>
         <div className="flex justify-between items-center mt-4">
-          <div className="space-x-4">
+          <div className="space-x-4 flex gap-12">
             <a onClick={scrollToWork} className="hover:underline cursor-pointer">Work</a>
             <a onClick={scrollToProducts} className="hover:underline cursor-pointer">Master Class</a>
             <a onClick={scrollToStats} className="hover:underline cursor-pointer">Presets</a>
-            <Link to="/privacy" className="hover:underline">Privacy Policy</Link>
             <a onClick={scrollToContact} className="hover:underline cursor-pointer">Contact</a>
           </div>
           <div>
-            <a href="mailto:management@samkolder.com" className="hover:underline">management@samkolder.com</a>
+            <a href="mailto:management@samkolder.com" className="hover:underline">marulspor@dahadamarul.com</a>
           </div>
         </div>
       </div>
