@@ -5,14 +5,22 @@ import Products from '../components/Products';
 import Stats from '../components/Stats';
 import Contact from '../components/Contact';
 
-function Home() {
+function Home({ workRef, productsRef, statsRef, contactRef }) {
   return (
     <div>
       <Hero />
-      <Work />
-      <Products />
-      <Stats />
-      <Contact />
+      <div ref={workRef}>
+        <Work />
+      </div>
+      <div ref={productsRef}>
+        <Products />
+      </div>
+      <div ref={statsRef}>
+        <Stats />
+      </div>
+      <div ref={contactRef}>
+        <Contact />
+      </div>
     </div>
   );
 }

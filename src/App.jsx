@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import WorkPage from './pages/WorkPage';
 import ContactPage from './pages/ContactPage';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -9,6 +8,16 @@ import ProgressBar from './components/ProgressBar';
 import './App.css'; // CSS dosyasını içeri aktarın
 
 function App() {
+  const workRef = useRef(null);
+  const productsRef = useRef(null);
+  const statsRef = useRef(null);
+  const contactRef = useRef(null);
+
+  const scrollToWork = () => workRef.current.scrollIntoView({ behavior: 'smooth' });
+  const scrollToProducts = () => productsRef.current.scrollIntoView({ behavior: 'smooth' });
+  const scrollToStats = () => statsRef.current.scrollIntoView({ behavior: 'smooth' });
+  const scrollToContact = () => contactRef.current.scrollIntoView({ behavior: 'smooth' });
+
   useEffect(() => {
     const mybutton = document.getElementById('myBtn');
 
@@ -43,11 +52,10 @@ function App() {
       </button>
       <div className="App bg-dark-bg">
         <ProgressBar />
-        <Header />
+        <Header scrollToWork={scrollToWork} scrollToProducts={scrollToProducts} scrollToStats={scrollToStats} scrollToContact={scrollToContact} />
         <main className="pt-16">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/work" element={<WorkPage />} />
+            <Route path="/" element={<Home workRef={workRef} productsRef={productsRef} statsRef={statsRef} contactRef={contactRef} />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </main>
