@@ -13,13 +13,13 @@ const Intro = ({ videoSrc, fullVideoSrc }) => {
       const windowHeight = window.innerHeight;
       const documentHeight = document.documentElement.scrollHeight;
 
-      // Scroll progress calculation with amplified effect
+      // Adjust scroll amplification
       const scrollProgress = Math.min(scrollTop / (documentHeight - windowHeight), 1);
-      const amplifiedProgress = Math.pow(scrollProgress, 0.2);
+      const amplifiedProgress = Math.pow(scrollProgress, 0.5); // Increase the power to speed up the effect
 
       // Calculate width and height based on the scroll
-      const newWidth = 940 + amplifiedProgress * 200; // 200 is an arbitrary number to amplify the effect
-      const newHeight = 528 + amplifiedProgress * 112; // Maintain aspect ratio
+      const newWidth = 940 + amplifiedProgress * 600; // Increase the amplification factor for faster growth
+      const newHeight = 528 + amplifiedProgress * 336; // Maintain aspect ratio
       setWidth(newWidth);
       setHeight(newHeight);
     };
@@ -44,8 +44,8 @@ const Intro = ({ videoSrc, fullVideoSrc }) => {
       <div className="relative w-full flex justify-center">
         <video 
           ref={videoRef} 
-          className="transition-all duration-300"
-          style={{ width: `${width}px`, height: `${height}px`, maxWidth: '100%' }} // Restrict vertical growth
+          className="transition-all duration-300 object-cover"
+          style={{ width: `${width}px`, height: `${height}px`, maxWidth: '100%', maxHeight: '100vh' }} // Restrict vertical growth
           autoPlay
           loop
           muted
